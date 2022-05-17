@@ -175,7 +175,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
-  devise
+  devise (~> 4.8.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
   sqlite3 (~> 1.4)
