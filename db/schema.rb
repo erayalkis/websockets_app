@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_18_133755) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_18_135848) do
   create_table "commissions", force: :cascade do |t|
     t.integer "commissioner_id"
     t.integer "artist_id"
@@ -28,6 +28,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_18_133755) do
   create_table "requests", force: :cascade do |t|
     t.integer "artist_id"
     t.integer "commissioner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_details", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "user_pronouns", default: "", null: false
+    t.string "user_twitter_url", default: ""
+    t.string "user_toyhouse_url", default: ""
+    t.string "user_pronouns_page_url", default: ""
+    t.string "user_carrd_url", default: ""
+    t.string "user_personal_site_url", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
