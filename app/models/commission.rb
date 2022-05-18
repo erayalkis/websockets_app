@@ -3,5 +3,6 @@ class Commission < ApplicationRecord
     validates :commissioner_id, presence: :true
     
     
-    belongs_to :user
+    belongs_to :commissioner, class_name: 'User', foreign_key: 'commissioner_id'
+    belongs_to :artist, class_name: 'User', foreign_key: 'artist_id'
 end
