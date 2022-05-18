@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
-    @post = Post.all
+    @posts = Post.all
 
-    if @post
-      render json: @post
+    if @posts
+      render json: @posts
     else
       render json: { msg: 'Posts not found!' }, status: 404
     end
